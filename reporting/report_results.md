@@ -60,7 +60,7 @@ smaller samples could be used if it could be verified that a participant
 pool consistently produce native-like VOT in their L2, as the source of
 variability could also be explained by variability in L2 proficiency.
 
-<img src="/Users/kyleparrish/Documents/GitHub/L3_literature/plots/l1_l2.png" width="1950" />
+<img src="/Users/kyleparrish/Documents/GitHub/L3_literature/l3_phon_ma/plots/l1_l2.png" width="1950" />
 
 ### L2-L3 and L1-L2 Comparisons
 
@@ -74,9 +74,9 @@ effect size being greater than .4 was 0.06, and the esimate was 0.21
 \[95% HDI = -0.57, 0.98\]. Forest plots for both language pairings can
 be seen below.
 
-<img src="/Users/kyleparrish/Documents/GitHub/L3_literature/plots/l2_l3.png" width="1950" />
+<img src="/Users/kyleparrish/Documents/GitHub/L3_literature/l3_phon_ma/plots/l2_l3.png" width="1950" />
 
-<img src="/Users/kyleparrish/Documents/GitHub/L3_literature/plots/l1_l3.png" width="1950" />
+<img src="/Users/kyleparrish/Documents/GitHub/L3_literature/l3_phon_ma/plots/l1_l3.png" width="1950" />
 
 ## Brief Discussion
 
