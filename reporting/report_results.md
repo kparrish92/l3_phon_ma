@@ -17,6 +17,12 @@ for each effect size. Due to the presence of many language pairings, the
 absolute value of effect size was taken, so that the magnitude of
 effects could be focused on, rather than directionality.
 
+\*The formula used to compute standard error of an effect size was
+`SE = sqrt(2(1 - r)/n) + es/2n))`, where `r` is the correlation of
+within subjects responses (set to .5), `n` is the number of participants
+in the study, and `es` is the effect size, expressed as a standardized
+mean difference.
+
 ## Analysis
 
 In order to determine a pooled effect, a Bayesian Generalized
@@ -45,9 +51,9 @@ The results of all three language pairings suggest that the body of
 literature has not provided evidence for clear results when it comes to
 cross-language interactions of VOT in L3 learners. First, for the L1-L2
 language pairing, the probability of the average effect size being
-greater than .4 was 0.07. The plot below is a forest plot of the effect
+greater than .4 was 0.06. The plot below is a forest plot of the effect
 size estimate per study, and includes a pooled estimate of all studies.
-The estimate for the L1-L2 comparison was 0.18 \[95% HDI = -0.54, 1\].
+The estimate for the L1-L2 comparison was 0.19 \[95% HDI = -0.6, 0.97\].
 This result is troublesome, since it is essentially a prerequisite of L3
 research that speakers have relatively stable and independent categories
 in their L1 and their L2. Without this clear difference between the L1
@@ -60,7 +66,7 @@ smaller samples could be used if it could be verified that a participant
 pool consistently produce native-like VOT in their L2, as the source of
 variability could also be explained by variability in L2 proficiency.
 
-<img src="/Users/kyleparrish/Documents/GitHub/L3_literature/l3_phon_ma/plots/l1_l2.png" width="1950" />
+<img src="/Users/kyleparrish/Documents/GitHub/l3_phon_ma/plots/l1_l2.png" width="1950" />
 
 ### L2-L3 and L1-L2 Comparisons
 
@@ -68,15 +74,15 @@ Given that the pooled estimate of L1-L2 difference was inconclusive, the
 comparisons for other language pairing cannot reliably be attributed to
 the L1 or the L2. Nonetheless, the results are reported here. For the
 L2-L3 language pairing, the probability of the average effect size being
-greater than .4 was 0.06, and the esimate was 0.15 \[95% HDI = -0.59,
-0.84\]. For the L1-L3 language pairing, the probability of the average
-effect size being greater than .4 was 0.06, and the esimate was 0.21
-\[95% HDI = -0.57, 0.98\]. Forest plots for both language pairings can
+greater than .4 was 0.06, and the esimate was 0.14 \[95% HDI = -0.54,
+0.86\]. For the L1-L3 language pairing, the probability of the average
+effect size being greater than .4 was 0.06, and the estimate was 0.21
+\[95% HDI = -0.54, 1.02\]. Forest plots for both language pairings can
 be seen below.
 
-<img src="/Users/kyleparrish/Documents/GitHub/L3_literature/l3_phon_ma/plots/l2_l3.png" width="1950" />
+<img src="/Users/kyleparrish/Documents/GitHub/l3_phon_ma/plots/l2_l3.png" width="1950" />
 
-<img src="/Users/kyleparrish/Documents/GitHub/L3_literature/l3_phon_ma/plots/l1_l3.png" width="1950" />
+<img src="/Users/kyleparrish/Documents/GitHub/l3_phon_ma/plots/l1_l3.png" width="1950" />
 
 ## Brief Discussion
 
@@ -87,3 +93,16 @@ at least have two reliably separate distributions of VOT values that
 could represent underlying language-specific categories. Without this
 criterion as a starting point, there is not reasonable support to
 evaluate the predictions of L3 models.
+
+The figure below demonstrates that the plausible Bayesian estimates of
+effect sizes per language pairing vary greatly. The vertical, dashed
+lines represent small, medium and large effect sizes as standardized
+mean differences (.4 = small, .7 = medium, 1 = large; Plonsky & Oswald,
+2014).
+
+As can be seen in the figure, the distribution of plausible effect sizes
+includes 0, small effects, medium effects, and some large effects. As a
+result, it is difficult to make clear and categorical conclusions based
+on this data.
+
+<img src="/Users/kyleparrish/Documents/GitHub/l3_phon_ma/plots/plot.png" width="1950" />

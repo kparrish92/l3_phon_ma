@@ -25,17 +25,33 @@ l2_l3df = l2_l3_brm %>%
   dplyr::select(b_Intercept) %>% 
   mutate(parameter = "l2_l3") 
 
+
 all_df = rbind(l1_l2df, l1_l3df, l2_l3df)
 
 all_df %>%
   ggplot(., aes(x = b_Intercept, y = parameter)) + 
-  geom_vline(xintercept = 0, lty = 3) +
-  tidybayes::stat_halfeye(pch = 21, point_fill = "white", point_size = 3, 
-                          .width = c(0.66, 0.95)) + 
+  geom_vline(xintercept = 0, lty = 7, color = "azure4") +
+  stat_halfeye(point_fill = "white", shape = 21, .width = c(0.8, 0.95)) +
+  geom_vline(xintercept = .4, linetype = 2, color = "deepskyblue2") +
+  geom_vline(xintercept = -.4, linetype = 2, color = "deepskyblue2") +
+  geom_vline(xintercept = .7, linetype = 2, color = "deepskyblue3") +
+  geom_vline(xintercept = -.7, linetype = 2, color = "deepskyblue3") +
+  geom_vline(xintercept = 1, linetype = 2, color = "deepskyblue4") +
+  geom_vline(xintercept = -1, linetype = 2, color = "deepskyblue4") +
   labs(title = "Meta-analysis models per language pairing", 
-       subtitle = "Forest plot of population estimates", 
+       subtitle = "Forest plot of plausible effect sizes from the Bayesian models", 
        caption = "Posterior means +/- 66% and 95% CI", 
-       y = "Language Pairing", x = "Estimate") + ggsave(here("plots", "plot.png"))
+       y = "Language Pairing", x = "Estimate") +
+  coord_cartesian(xlim = c(-2, 2)) + ggsave(here("plots", "plot.png"))
+
+
+
+
+geom_tile(data = pooled_summary, aes(width = .lower - .upper),
+          alpha = 0.2, height = Inf, fill = "#31688EFF")
+
+
+es_df = data.frame(.lower = c(-.4, -.7, -1), .upper = c(.4, .7, 1))
 
 #_____________________
 
@@ -56,7 +72,6 @@ pooled_effect_draws <- spread_draws(l2_l3_brm, b_Intercept) %>%
 # Combine it and clean up
 forest_data <- bind_rows(study_draws, pooled_effect_draws) %>% 
   ungroup() %>% 
-           mutate(Study = str_replace_all(Study, "[.]", " ")) %>% 
   mutate(Study = reorder(Study, b_Intercept), 
          Study = relevel(Study, "Pooled Effect", after = Inf)) 
                   
